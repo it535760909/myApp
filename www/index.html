@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <!-- Good default declaration:
+    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+    * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+        * Enable inline JS: add 'unsafe-inline' to default-src
+        * Enable eval(): add 'unsafe-eval' to default-src
+    * Create your own at http://cspisawesome.com
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>Hello World</title>
+</head>
+
+<body>
+<div class="mb-top-slide">
+    <div class="flexslider">
+        <ul class="slides">
+    
+             <li><a href="#" target="_blank"><img src="images/mb-pic.jpg" alt=""></a></li>
+        </ul>
+    </div>
+
+    <div class="mb-logo"><img src="images/mb-logo.png" width="100" alt="快帮云"></div>
+    <a href="mlogin.php" class="mb-u-member"><i></i>登录</a>
+</div>
+
+
+<div class="mnav" style="height: 100%; top: 0;">
+    <a href="javascript:;" class="mGuan">x</a>
+    <div style="height: 10px;"></div>
+
+   <dl class="msons">
+       <dt><a href="/school.php?&cul=6">云学堂</a></dt>
+   </dl>
+   <dl class="msons">
+       <dt><a href="/result_list.php?&cul=7" id="-mcha">免费商标查询</a></dt>
+   </dl>
+</div>
+
+
+<div class="mb-it-k">
+    <div class="mb-sb-search">
+        <form action="result_list.php" method="post">
+            <input type="text" name="keyword" class="text" placeholder="请输入需要查询的商标名称">
+            <input type="hidden" name="action" class="text" value="submit">
+        <input type="submit" value="" class="btn">
+        </form>
+        
+    </div>
+    <ul class="mb-tuij clearfix">
+        <li>
+            <a href="product_info.php?pid=337"><i></i>商标注册</a>
+        </li>
+        <li>
+            <a href="product_info.php?pid=347"><i></i>版权登记</a>                                                 
+        </li>
+        <li>
+            <a href="product_info.php?pid=393"><i></i>专利申请</a>
+        </li>
+        <li>
+            <a href="product_info.php?pid=395"><i></i>高新企业认定</a>
+        </li>
+        <li>
+            <a href="http://web.kbyun.com" target="_blank"><i></i>网站建设</a>                                                 
+        </li>
+        <li>
+            <a href="product_info.php?pid=402"><i></i>云画建站</a>
+        </li>
+        <li>
+            <a href="product_info.php?pid=360"><i></i>腾讯企业邮箱</a>
+        </li>
+        <li>
+            <a href="javascript:;" class="mMore"><i></i>更多</a>
+        </li>
+    </ul>
+</div>
+<script>
+$('.mMore').click(function(){
+    $('body').addClass('dnav');
+});
+$('.mGuan').click(function(){
+    $('body').removeClass('dnav');
+});
+</script>
+<ul class="mb-hot-bank clearfix">
+    <li><a href="product.php?pid=322"><h3 style="color: #05a2af;">知识产权</h3><span class="mb-hot-pic"><img src="images/mb-2.jpg" width="80"></span></a></li>
+    <li><a href="product.php?pid=397" ><h3 style="color: #ab2805;">网站建设</h3><span class="mb-hot-pic"><img src="images/mb-3.jpg" width="80"></span></a></li>
+    <li><a href="product.php?pid=324"><h3 style="color: #1a9742;">企业应用</h3><span class="mb-hot-pic"><img src="images/mb-4.jpg" width="80"></span></a></li>
+</ul>
+
+<div class="mb-hot-tj">
+    <div class="mb-ht"></div>
+    <ul class="mb-hot-list clearfix">
+
+       <li>
+            <a href="#" style="border-right: none;">
+                <h3>高新技术企业认定</h3>
+                <div class="intro">高新技术企业的我们更懂高企认定</div>
+                <div class="mb-hot-bar">
+                    <span class="mb-hot-price">价格面议</span>
+                    <span class="mb-quick-shen">快速申请</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <h3>响应式建站</h3>
+                <div class="intro">快速灵活适应不同终端显示</div>
+                <div class="mb-hot-bar">
+                    <span class="mb-hot-price">￥<em>10000</em>元</span>
+                    <span class="mb-quick-shen">快速申请</span>
+                </div>
+            </a>
+        </li>
+        <li>
+            <a href="#" style="border-right: none;">
+                <h3>腾讯企业邮箱</h3>
+                <div class="intro">与微信、QQ强势结合</div>
+                <div class="mb-hot-bar">
+                    <span class="mb-hot-price">￥<em>150</em>元/用户/年</span>
+                    <span class="mb-quick-shen">快速申请</span>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+
+<ul class="mb-fuwu clearfix">
+    <li>
+        <i></i>
+        <div class="mb-fuwu-txt">
+            <h3>自营平台</h3>
+            <div class="intro">自营模式，高品质保证</div>
+        </div>
+    </li>
+    <li>
+        <i></i>
+        <div class="mb-fuwu-txt">
+            <h3>金牌服务</h3>
+            <div class="intro">一对一专属顾问贴身服务</div>
+        </div>
+    </li>
+    <li>
+        <i></i>
+        <div class="mb-fuwu-txt">
+            <h3>售后保障</h3>
+            <div class="intro">网上跟踪，全程跟进</div>
+        </div>
+    </li>
+    <li>
+        <i></i>
+        <div class="mb-fuwu-txt">
+            <h3>一站式服务</h3>
+            <div class="intro">满足企业各阶段的不同需求</div>
+        </div>
+    </li>
+</ul>
+
+<div class="mb-bbox">
+    <div class="mb-links"><a href="about.php?pid=254">关于我们</a>|<a href="join.php?pid=258">诚聘英才</a>|<a href="about.php?pid=416">公司新闻</a>|<a href="service.php?pid=262">联系我们</a></div>
+    <div class="mb-kby"></div>
+    <ul class="mb-foot">
+        <li class="dh400"><a href="tel:4008919003"><i></i><span>4008-919-003</span></a></li>
+        <li class="mb-kefu"><a href=""><i></i><span>在线客服</span></a></li>
+    </ul>
+</div>
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+    
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+    <script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+<script type="text/javascript">
+$(function() {
+    $(".flexslider").flexslider({
+        slideshowSpeed: 4000, 
+        animationSpeed: 400,
+        controlNav:true,
+        directionNav:false,
+        animation: "slide"
+    });
+}); 
+</script>
+</body>
+
+</html>
